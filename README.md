@@ -7,6 +7,20 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+##Instalation & Setup Hexashop Project
+<h1>Using GitBash</h1><br>
+<h1>Copy Url</h1>
+https://github.com/fjeshan2608/Hexashop.git
+<br>
+<h1>Download File in : C:\xampp\htdocs</h1><br>
+##Setup Data-base Command 
+<h2>php artisan migrate</h2>
+<h3>php artisan db:seed</h3>
+
+##Log-in
+<h1>Gmail : jeshank1123@gmail.com</h1>
+<h1>Password : 123456789</h1>
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
