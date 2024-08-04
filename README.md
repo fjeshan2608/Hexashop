@@ -21,7 +21,7 @@ https://github.com/fjeshan2608/Hexashop.git
 <h4>Gmail : jeshank1123@gmail.com</h4>
 <h4>Password : 123456789</h4>
 
-## About Laravel
+<h1 style=""text-align:center>About Laravel</h1> 
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
