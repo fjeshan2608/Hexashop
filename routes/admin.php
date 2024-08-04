@@ -3,8 +3,6 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
-use App\Http\Controllers\Admin\ColorController;
-use App\Http\Controllers\Admin\SizeController;
 use App\Http\Controllers\Admin\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,21 +13,15 @@ Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
 // Category Related
 Route::get('/Add-Category', [CategoryController::class, 'index'])->name('add.category');
 Route::get('/All-Category', [CategoryController::class, 'table'])->name('all.category');
+Route::post('/Save-Category', [CategoryController::class, 'save'])->name('category.save');
+Route::get('/Edit-Category/{id}', [CategoryController::class, 'edit'])->name('category.edit');
+Route::post('/Update-Category', [CategoryController::class, 'update'])->name('category.update');
+Route::get('/Delete-Category/{id}', [CategoryController::class, 'del'])->name('category.del');
 
 
 // Sub-Category Related
 Route::get('/Add-Sub-Category', [SubCategoryController::class, 'index'])->name('add.sub-category');
 Route::get('/All-Sub-Category', [SubCategoryController::class, 'table'])->name('all.sub-category');
-
-
-// Color Related
-Route::get('/Add-Color', [ColorController::class, 'index'])->name('add.color');
-Route::get('/All-Color', [ColorController::class, 'table'])->name('all.color');
-
-
-// Size Related
-Route::get('/Add-Size', [SizeController::class, 'index'])->name('add.size');
-Route::get('/All-Size', [SizeController::class, 'table'])->name('all.size');
 
 
 // Products Related

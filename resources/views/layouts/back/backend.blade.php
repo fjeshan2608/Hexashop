@@ -41,18 +41,6 @@
                       <li><a href="{{route('admin.all.sub-category')}}">ALL SUB-CATEGORY</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-circle-o"></i> COLOR <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="{{route('admin.add.color')}}">ADD COLOR</a></li>
-                      <li><a href="{{route('admin.all.color')}}">ALL COLOR</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-ruler"></i> SIZE <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="{{route('admin.add.size')}}">ADD SIZE</a></li>
-                      <li><a href="{{route('admin.all.size')}}">ALL SIZE</a></li>
-                    </ul>
-                  </li>
                   <li><a><i class="fa fa-shopping-cart"></i> PRODUCTS <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{route('admin.add.products')}}">ADD PRODUCTS</a></li>
