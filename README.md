@@ -18,8 +18,8 @@ https://github.com/fjeshan2608/Hexashop.git
 <h3>php artisan db:seed</h3>
 
 ##Log-in
-<h1>Gmail : jeshank1123@gmail.com</h1>
-<h1>Password : 123456789</h1>
+<h4>Gmail : jeshank1123@gmail.com</h4>
+<h4>Password : 123456789</h4>
 
 ## About Laravel
 
