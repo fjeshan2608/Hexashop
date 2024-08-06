@@ -22,6 +22,10 @@ Route::get('/Delete-Category/{id}', [CategoryController::class, 'del'])->name('c
 // Sub-Category Related
 Route::get('/Add-Sub-Category', [SubCategoryController::class, 'index'])->name('add.sub-category');
 Route::get('/All-Sub-Category', [SubCategoryController::class, 'table'])->name('all.sub-category');
+Route::post('/Save-Sub-Category', [SubCategoryController::class, 'save'])->name('sub-category.save');
+Route::get('/Edit-Sub-Category/{id}', [SubCategoryController::class, 'edit'])->name('sub-category.edit');
+Route::post('/Update-Sub-Category', [SubCategoryController::class, 'update'])->name('sub-category.update');
+Route::get('/Delete-Sub-Category/{id}', [SubCategoryController::class, 'del'])->name('sub-category.del');
 
 
 // Products Related

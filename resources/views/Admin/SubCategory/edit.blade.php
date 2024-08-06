@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>ADD-SUB-CATEGORY</title>
+    <title>EDIT-SUB-CATEGORY</title>
 @extends('layouts.back.backend')
 @section('content')
 
@@ -52,28 +52,28 @@
                   <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                  <form class="" action="{{route('admin.sub-category.save')}}" method="post" novalidate enctype="multipart/form-data">
+                  <form class="" action="{{route('admin.sub-category.update')}}" method="post" novalidate enctype="multipart/form-data">
                     @csrf
                       
                       <span class="section">Sub-Category Info</span>
                       <div class="field item form-group">
                           <label class="col-form-label col-md-3 col-sm-3  label-align">Sub-Category Name<span class="required">*</span></label>
                           <div class="col-md-6 col-sm-6">
-                              <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="ex. Women's / Men's" required="required" />
+                              <input class="form-control" data-validate-length-range="6" data-validate-words="2" value="{{$sub->subcat_name}}" name="name" placeholder="ex. Women's / Men's" required="required" />
                           </div>
                       </div>
                       <div class="field item form-group">
                         <label class="control-label col-md-3 col-sm-3 label-align">Select Category</label>
                         <div class="col-md-6 col-sm-6 ">
                           <select class="form-control" name="cat">
-                            <option>Choose option</option>
+                            <option>{{$sub->cat->cat_name}}</option>
                             @foreach ($cat as $cat)
                             <option value="{{$cat->cat_id}}">{{$cat->cat_name}}</option>
                             @endforeach
                           </select>
                         </div>
                       </div>
-                      
+                      <input type="hidden" name="s_id" value="{{$sub->subcat_id}}">
                      <br>
                           <div class="form-group">
                               <div class="col-md-6 offset-md-3">

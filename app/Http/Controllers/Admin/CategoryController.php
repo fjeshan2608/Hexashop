@@ -95,7 +95,7 @@ class CategoryController extends Controller
         $cat=Categories::find($id);
         $cat->delete();
         $notification = array(
-            'message' => 'product Delete Successfully',
+            'message' => 'Category Delete Successfully',
             'alert-type' => 'error'
         );
         return redirect()->back()->with($notification);
