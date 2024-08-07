@@ -74,7 +74,7 @@
                           <select class="form-control" name="cat">
                             <option>{{$product->cat->cat_name}}</option>
                             @foreach ($cat as $cat)
-                            <option value="{{$cat->cat_id}}">{{$cat->cat_name}}</option>
+                            <option value="{{$cat->cat_id}}" @if($product->product_cat == $cat->cat_id) {{"selected"}} @endif>{{$cat->cat_name}}</option>
                             @endforeach
                           </select>
                         </div>
@@ -85,7 +85,7 @@
                           <select class="form-control" name="sub_cat">
                             <option>{{$product->subcat->subcat_name}}</option>
                             @foreach ($sub as $sub)
-                            <option value="{{$sub->subcat_id}}">{{$sub->subcat_name}}</option>
+                            <option value="{{$sub->subcat_id}}" @if($product->product_subcat == $sub->subcat_id) {{"selected"}} @endif>{{$sub->subcat_name}}</option>
                             @endforeach
                           </select>
                         </div>
@@ -108,6 +108,12 @@
                         <input class="form-control" data-validate-length-range="6" data-validate-words="2" value="{{$product->product_price}}" name="price" placeholder="ex. BDT 200" required="required" />
                     </div>
                 </div>
+                <div class="field item form-group">
+                  <label class="col-form-label col-md-3 col-sm-3  label-align">Product's Stock<span class="required">*</span></label>
+                  <div class="col-md-6 col-sm-6">
+                      <input class="form-control" data-validate-length-range="6" data-validate-words="2" value="{{$product->product_stock}}" name="stock" placeholder="ex. BDT 200" required="required" />
+                  </div>
+              </div>
                    
                 <div class="field item form-group">
                   <label class="col-form-label col-md-3 col-sm-3  label-align" for="basic-icon-default-company">Image 1</label>

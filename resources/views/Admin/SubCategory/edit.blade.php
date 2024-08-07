@@ -68,7 +68,7 @@
                           <select class="form-control" name="cat">
                             <option>{{$sub->cat->cat_name}}</option>
                             @foreach ($cat as $cat)
-                            <option value="{{$cat->cat_name}}">{{$cat->cat_name}}</option>
+                            <option value="{{$cat->cat_id}}" @if($sub->sub_cat == $cat->cat_id) {{"selected"}} @endif>{{$cat->cat_name}}</option>
                             @endforeach
                           </select>
                         </div>
