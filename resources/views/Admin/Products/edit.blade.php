@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>ADD-PRODUCTS</title>
+    <title>Edit-PRODUCTS</title>
 @extends('layouts.back.backend')
 @section('content')
 
@@ -52,27 +52,27 @@
                   <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                  <form class="" action="{{route('admin.product.save')}}" method="post" novalidate enctype="multipart/form-data">
+                  <form class="" action="{{route('admin.product.update')}}" method="post" enctype="multipart/form-data" >
                     @csrf
                       
                       <span class="section">Products Info</span>
                       <div class="field item form-group">
                           <label class="col-form-label col-md-3 col-sm-3  label-align">Product Name<span class="required">*</span></label>
                           <div class="col-md-6 col-sm-6">
-                              <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="ex. Jacket/Gen's" required="required" />
+                              <input class="form-control" data-validate-length-range="6" data-validate-words="2" value="{{$product->product_name}}" name="name" placeholder="ex. Jacket/Gen's" required="required" />
                           </div>
                       </div>
                       <div class="field item form-group">
                         <label class="col-form-label col-md-3 col-sm-3  label-align">Products Description</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <textarea class="resizable_textarea form-control" name="description" placeholder="This text area automatically resizes its height as you fill in more text courtesy of autosize-master it out..." style="height: 88px;"></textarea>
+                          <textarea class="resizable_textarea form-control" value="" name="description" placeholder="This text area automatically resizes its height as you fill in more text courtesy of autosize-master it out..." style="height: 88px;">{{$product->product_description}}</textarea>
                         </div>
                       </div>
                       <div class="field item form-group">
                         <label class="control-label col-md-3 col-sm-3 label-align">Select Category</label>
                         <div class="col-md-6 col-sm-6 ">
                           <select class="form-control" name="cat">
-                            <option>Choose option</option>
+                            <option>{{$product->cat->cat_name}}</option>
                             @foreach ($cat as $cat)
                             <option value="{{$cat->cat_id}}">{{$cat->cat_name}}</option>
                             @endforeach
@@ -83,7 +83,7 @@
                         <label class="control-label col-md-3 col-sm-3 label-align">Select Sub-Category</label>
                         <div class="col-md-6 col-sm-6 ">
                           <select class="form-control" name="sub_cat">
-                            <option>Choose option</option>
+                            <option>{{$product->subcat->subcat_name}}</option>
                             @foreach ($sub as $sub)
                             <option value="{{$sub->subcat_id}}">{{$sub->subcat_name}}</option>
                             @endforeach
@@ -93,34 +93,28 @@
                       <div class="field item form-group">
                         <label class="col-form-label col-md-3 col-sm-3  label-align">Product's Color<span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6">
-                            <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="color" placeholder="ex.  Black..." required="required" />
+                            <input class="form-control" data-validate-length-range="6" data-validate-words="2" value="{{$product->product_color}}" name="color" placeholder="ex.  Black..." required="required" />
                         </div>
                     </div>
                     <div class="field item form-group">
                       <label class="col-form-label col-md-3 col-sm-3  label-align">Product's Size<span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6">
-                          <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="size" placeholder="ex. XL" required="required" />
+                          <input class="form-control" data-validate-length-range="6" data-validate-words="2" value="{{$product->product_size}}" name="size" placeholder="ex. XL" required="required" />
                       </div>
                   </div>
                   <div class="field item form-group">
                     <label class="col-form-label col-md-3 col-sm-3  label-align">Product's Price<span class="required">*</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="price" placeholder="ex. BDT 200" required="required" />
+                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" value="{{$product->product_price}}" name="price" placeholder="ex. BDT 200" required="required" />
                     </div>
                 </div>
-                <div class="field item form-group">
-                  <label class="col-form-label col-md-3 col-sm-3  label-align">Product Stock<span class="required">*</span></label>
-                  <div class="col-md-6 col-sm-6">
-                      <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="stock" placeholder="ex. Jacket/Gen's" required="required" />
-                  </div>
-              </div>
                    
                 <div class="field item form-group">
                   <label class="col-form-label col-md-3 col-sm-3  label-align" for="basic-icon-default-company">Image 1</label>
                   <div class="col-sm-12">
                       
                     <div class="col-md-6 col-sm-6">
-                      <img id="studentPhoto">
+                      <img id="studentPhoto" src="{{asset('storage/back/media/product/img1/'.$product->product_image1)}}">
                       <input class="form-control" type="file" name="image1" id="formFile"  onchange="studentphoto(this);" id="photo" accept="image/*">
                     </div>
                   </div>
@@ -131,12 +125,12 @@
                   <div class="col-sm-12">
                       
                     <div class="col-md-6 col-sm-6">
-                      <img id="studentPhoto2">
+                      <img id="studentPhoto2" src="{{asset('storage/back/media/product/img2/'.$product->product_image2)}}">
                       <input class="form-control" type="file" name="image2" id="formFile"  onchange="studentphoto2(this);" id="photo" accept="image/*">
                     </div>
                   </div>
                 </div>
-                     
+                     <input type="hidden" name="p_id" value="{{$product->product_id}}">
                       
                      <br>
                           <div class="form-group">

@@ -31,6 +31,11 @@ Route::get('/Delete-Sub-Category/{id}', [SubCategoryController::class, 'del'])->
 // Products Related
 Route::get('/Add-Products', [ProductsController::class, 'index'])->name('add.products');
 Route::get('/All-Products', [ProductsController::class, 'table'])->name('all.products');
+Route::post('/Save-Product', [ProductsController::class, 'save'])->name('product.save');
+Route::get('/View-Product/{id}', [ProductsController::class, 'view'])->name('product.view');
+Route::get('/Edit-Product/{id}', [ProductsController::class, 'edit'])->name('product.edit');
+Route::post('/Update-Products', [ProductsController::class, 'update'])->name('product.update');
+Route::get('/Delete-Products/{id}', [ProductsController::class, 'del'])->name('product.del');
 
                 
 require __DIR__.'/auth.php';
