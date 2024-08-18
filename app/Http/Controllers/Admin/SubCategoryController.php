@@ -42,7 +42,8 @@ class SubCategoryController extends Controller
     // Table
     public function table(){
         $sub=Subcategory::all();
-        return view('Admin.SubCategory.table',compact('sub'));
+        $cat=Categories::all();
+        return view('Admin.SubCategory.table',compact('sub','cat'));
     }
     // Edit
     public function edit($id){

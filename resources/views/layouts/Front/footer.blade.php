@@ -78,7 +78,7 @@
     <script src="{{asset('storage/front/assets/js/slick.js')}}"></script> 
     <script src="{{asset('storage/front/assets/js/lightbox.js')}}"></script> 
     <script src="{{asset('storage/front/assets/js/isotope.js')}}"></script> 
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Global Init -->
     <script src="{{asset('storage/front/assets/js/custom.js')}}"></script>
 

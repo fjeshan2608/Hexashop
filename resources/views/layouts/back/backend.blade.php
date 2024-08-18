@@ -29,17 +29,10 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-book"></i> CATEGORY <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="{{route('admin.add.category')}}">ADD-CATEGORY</a></li>
-                      <li><a href="{{route('admin.all.category')}}">ALL-CATEGORY</a></li>
-                    </ul>
+                  <li><a href="{{route('admin.all.category')}}"><i class="fa fa-book"></i> CATEGORY <span class="fa fa-chevron"></span></a>
                   </li>
-                  <li><a><i class="fa fa-book"></i> SUB-CATEGORY <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="{{route('admin.add.sub-category')}}">ADD SUB-CATEGORY</a></li>
-                      <li><a href="{{route('admin.all.sub-category')}}">ALL SUB-CATEGORY</a></li>
-                    </ul>
+                  <li><a href="{{route('admin.all.sub-category')}}"><i class="fa fa-book"></i> SUB-CATEGORY <span class="fa fa-chevron"></span></a>
+                
                   </li>
                   <li><a><i class="fa fa-shopping-cart"></i> PRODUCTS <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">

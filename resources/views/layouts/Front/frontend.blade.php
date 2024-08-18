@@ -60,8 +60,8 @@ https://templatemo.com/tm-571-hexashop
                         </li>
                         <li class="scroll-to-section"><a href="#explore">Explore</a></li>
                         <div style="display: flex; gap: 10px;">
-                            <a href="{{route('register')}}" style="text-decoration: none; color: white; background-color: #007bff; padding: 8px 16px; border-radius: 4px;">Register</a>
-                            <a href="{{route('login')}}" style="text-decoration: none; color: white; background-color: #28a745; padding: 8px 16px; border-radius: 4px;">Sign Up</a>
+                            <a href="{{route('register')}}" style="text-decoration: none; color: white; background-color: #007bff; padding: 8px 16px; border-radius: 4px;" target="blank">Register</a>
+                            <a href="{{route('login')}}" style="text-decoration: none; color: white; background-color: #28a745; padding: 8px 16px; border-radius: 4px;" target="blank">Sign Up</a>
                         </div>
                     </ul>  
                           

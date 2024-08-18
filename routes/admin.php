@@ -11,7 +11,6 @@ Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
 
 
 // Category Related
-Route::get('/Add-Category', [CategoryController::class, 'index'])->name('add.category');
 Route::get('/All-Category', [CategoryController::class, 'table'])->name('all.category');
 Route::post('/Save-Category', [CategoryController::class, 'save'])->name('category.save');
 Route::get('/Edit-Category/{id}', [CategoryController::class, 'edit'])->name('category.edit');
@@ -20,7 +19,6 @@ Route::get('/Delete-Category/{id}', [CategoryController::class, 'del'])->name('c
 
 
 // Sub-Category Related
-Route::get('/Add-Sub-Category', [SubCategoryController::class, 'index'])->name('add.sub-category');
 Route::get('/All-Sub-Category', [SubCategoryController::class, 'table'])->name('all.sub-category');
 Route::post('/Save-Sub-Category', [SubCategoryController::class, 'save'])->name('sub-category.save');
 Route::get('/Edit-Sub-Category/{id}', [SubCategoryController::class, 'edit'])->name('sub-category.edit');
